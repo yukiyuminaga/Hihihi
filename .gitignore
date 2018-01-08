@@ -20,3 +20,52 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+package practice2;
+
+import java.util.Scanner;
+import java.util.Random;
+import static java.lang.System.out;
+import static java.lang.System.in;
+
+/**
+ *
+ * @author user
+ */
+public class Practice2 {
+    enum Criminal{John,Josh,Bugger,Mum,}
+                   
+    public static void main(String arg[]){
+        Scanner keyboard = new Scanner(System.in);
+        Random value = new Random();
+        int a;
+        Criminal suspect;
+        out.println("Here are some clues.");
+        a = value.nextInt(100)+1;
+        out.println(a);
+        if(a<=20&&a>10){
+            suspect= Criminal.John;
+        }else if (a<=10&&a>0){
+            suspect = Criminal.Josh;
+        }else if (a<=30&&a>20){
+            suspect = Criminal.Bugger;
+        }else{
+            suspect = Criminal.Mum;
+        }
+        out.println(suspect);
+        if(suspect==Criminal.Mum){
+            out.println("Gotcha!!!");
+        }else{
+            out.println("Naa...");
+        }
+            
+        
+      
+        keyboard.close();
+    }
+
+        
+            ///  ODO code application logic her     
+    
+    
+}
